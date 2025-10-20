@@ -1,0 +1,18 @@
+{
+  "name": "moksh-page-dev-tools",
+  "version": "1.0.0",
+  "description": "Development tools for testing static sites and future React apps",
+  "scripts": {
+    "serve": "live-server --port=3000 --open=/index.html",
+    "serve-test-app": "live-server --port=3001 --open=/test-app/index.html",
+    "dev": "concurrently \"npm run serve\" \"echo Development server running at http://localhost:3000\"",
+    "build": "echo 'Building for production...' && echo 'Files ready for GitHub Pages deployment'"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "concurrently": "^8.2.2"
+  },
+  "keywords": ["portfolio", "development", "testing"],
+  "author": "Your Name",
+  "license": "MIT"
+}

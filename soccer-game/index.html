@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soccer Game - Naman Mandloi</title>
+    <meta name="description" content="A fun soccer game where you control a player and try to score goals. Created by Naman Mandloi.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
+            <h1 class="game-title">Soccer Game</h1>
+            <div class="nav-score">
+                <span>Score: <span id="score">0</span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Game Container -->
+    <div class="game-container">
+        <!-- Game Canvas -->
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        
+        <!-- Game UI Overlay -->
+        <div class="game-ui">
+            <!-- Game Info -->
+            <div class="game-info">
+                <div class="info-item">
+                    <i class="fas fa-futbol"></i>
+                    <span>Goals: <span id="goals">0</span></span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Time: <span id="time">0:00</span></span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-crosshairs"></i>
+                    <span>Shots: <span id="shots">0</span></span>
+                </div>
+            </div>
+            
+            <!-- Game Controls Info -->
+            <div class="controls-info">
+                <h3>Controls:</h3>
+                <div class="control-item">
+                    <span class="key">W A S D</span> or <span class="key">Arrow Keys</span> - Move Player
+                </div>
+                <div class="control-item">
+                    <span class="key">Spacebar</span> - Kick Ball
+                </div>
+                <div class="control-item">
+                    <span class="key">R</span> - Restart Game
+                </div>
+            </div>
+        </div>
+        
+        <!-- Game Status Messages -->
+        <div id="gameMessage" class="game-message hidden">
+            <div class="message-content">
+                <h2 id="messageTitle">Welcome!</h2>
+                <p id="messageText">Use WASD or arrow keys to move, Spacebar to kick!</p>
+                <button id="messageBtn" class="btn btn-primary">Start Game</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Controls (for touch devices) -->
+    <div class="mobile-controls">
+        <div class="dpad">
+            <button class="dpad-btn" id="moveUp" data-direction="up">
+                <i class="fas fa-chevron-up"></i>
+            </button>
+            <div class="dpad-middle">
+                <button class="dpad-btn" id="moveLeft" data-direction="left">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="dpad-btn center" id="kickBtn">
+                    <i class="fas fa-futbol"></i>
+                </button>
+                <button class="dpad-btn" id="moveRight" data-direction="right">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <button class="dpad-btn" id="moveDown" data-direction="down">
+                <i class="fas fa-chevron-down"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Game Instructions -->
+    <div class="instructions">
+        <h2>How to Play</h2>
+        <div class="instruction-grid">
+            <div class="instruction-item">
+                <i class="fas fa-running"></i>
+                <h3>Move Player</h3>
+                <p>Use WASD keys or arrow keys to move your player around the field</p>
+            </div>
+            <div class="instruction-item">
+                <i class="fas fa-futbol"></i>
+                <h3>Kick Ball</h3>
+                <p>Press Spacebar when near the ball to kick it towards the goal</p>
+            </div>
+            <div class="instruction-item">
+                <i class="fas fa-bullseye"></i>
+                <h3>Score Goals</h3>
+                <p>Aim for the goal posts and try to score as many goals as possible</p>
+            </div>
+            <div class="instruction-item">
+                <i class="fas fa-trophy"></i>
+                <h3>Beat Your Record</h3>
+                <p>Keep track of your best score and try to improve each game</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Naman Mandloi - Soccer Game. <a href="../index.html">Back to Portfolio</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

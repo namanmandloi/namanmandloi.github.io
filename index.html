@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naman Mandloi - Soccer Player Profile</title>
+    <meta name="description" content="Naman Mandloi's soccer player profile and career highlights. Available for recruitment opportunities and scouting.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">Naman Mandloi</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">Player Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Career Highlights</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#apps" class="nav-link">My Apps</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills & Stats</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact Scout</a>
+                </li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Hi, I'm <span class="highlight">Naman Mandloi</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Professional Soccer Player seeking new opportunities
+                </p>
+                <p class="hero-description">
+                    Dedicated midfielder with exceptional field vision, technical skills, and leadership qualities. Available for club trials and recruitment opportunities. I also develop web applications as a creative outlet.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Career Highlights</a>
+                    <a href="#apps" class="btn btn-secondary">Check Out My Apps</a>
+                    <a href="#contact" class="btn btn-secondary">Contact for Scouting</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- Profile image placeholder - replace with your soccer photo -->
+                <div class="profile-placeholder">
+                    <i class="fas fa-futbol"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Player Profile</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I am a dedicated soccer player with a passion for the beautiful game. My journey in soccer began at a young age, and I have been honing my skills through consistent training and competitive play.
+                    </p>
+                    <p>
+                        As a midfielder, I excel in creating opportunities for my teammates while maintaining strong defensive responsibilities. My vision on the field and ability to read the game have been key strengths throughout my career.
+                    </p>
+                    <p>
+                        <strong>Player Details:</strong>
+                    </p>
+                    <ul class="tech-list">
+                        <li>Position: Midfielder</li>
+                        <li>Preferred Foot: Right</li>
+                        <li>Height: [Your Height]</li>
+                        <li>Age: [Your Age]</li>
+                        <li>Experience: [Years Playing]</li>
+                        <li>Available for: Trials & Recruitment</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Career Highlights & Achievements</h2>
+            
+            <!-- Project Filter/Category Buttons -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All Achievements</button>
+                <button class="filter-btn" data-filter="web">Tournaments</button>
+                <button class="filter-btn" data-filter="mobile">Teams</button>
+                <button class="filter-btn" data-filter="game">Awards</button>
+                <button class="filter-btn" data-filter="tool">Training</button>
+                <button class="filter-btn" data-filter="other">Other</button>
+            </div>
+
+            <!-- Projects Counter -->
+            <div class="projects-counter">
+                <p>Showing <span id="project-count">0</span> career highlights</p>
+            </div>
+
+            <!-- Projects Grid - Will be populated by JavaScript -->
+            <div class="projects-grid" id="projects-container">
+                <!-- Career highlights will be dynamically added here -->
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-section">
+                <button id="load-more-btn" class="btn btn-secondary">Load More Highlights</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apps Portfolio Section -->
+    <section id="apps" class="apps">
+        <div class="container">
+            <h2 class="section-title">My App Development Portfolio</h2>
+            <div class="apps-intro">
+                <p class="apps-description">
+                    Beyond soccer, I enjoy building web applications and digital experiences. 
+                    Here are some of the apps I've created. Click on any app to try it out!
+                </p>
+            </div>
+            
+            <!-- App Filter/Category Buttons - Hidden for now -->
+            <div class="app-filters" style="display: none;">
+                <button class="filter-btn active" data-filter="all">All Apps</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+                <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                <button class="filter-btn" data-filter="game">Games</button>
+                <button class="filter-btn" data-filter="tool">Tools</button>
+                <button class="filter-btn" data-filter="other">Other</button>
+            </div>
+
+            <!-- Apps Counter -->
+            <div class="apps-counter">
+                <p>Check out my interactive soccer game!</p>
+            </div>
+
+            <!-- Apps Grid - Will be populated by JavaScript -->
+            <div class="apps-grid" id="apps-container">
+                <!-- Apps will be dynamically added here -->
+            </div>
+
+            <!-- Load More Apps Button - Hidden for now -->
+            <div class="load-more-section" style="display: none;">
+                <button id="load-more-apps-btn" class="btn btn-secondary">Load More Apps</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Player Statistics</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Technical Skills</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Ball Control</span>
+                        <span class="skill-item">Passing</span>
+                        <span class="skill-item">Dribbling</span>
+                        <span class="skill-item">Shooting</span>
+                        <span class="skill-item">First Touch</span>
+                        <span class="skill-item">Crossing</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Physical Attributes</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Speed</span>
+                        <span class="skill-item">Stamina</span>
+                        <span class="skill-item">Agility</span>
+                        <span class="skill-item">Strength</span>
+                        <span class="skill-item">Jumping</span>
+                        <span class="skill-item">Balance</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Mental Attributes</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Vision</span>
+                        <span class="skill-item">Decision Making</span>
+                        <span class="skill-item">Positioning</span>
+                        <span class="skill-item">Leadership</span>
+                        <span class="skill-item">Communication</span>
+                        <span class="skill-item">Work Rate</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Playing Style</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Playmaker</span>
+                        <span class="skill-item">Box-to-Box</span>
+                        <span class="skill-item">Creative</span>
+                        <span class="skill-item">Versatile</span>
+                        <span class="skill-item">Team Player</span>
+                        <span class="skill-item">Consistent</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact for Scouting Opportunities</h2>
+            <div class="contact-content">
+                <p class="contact-description">
+                    I'm actively seeking opportunities to join a professional club or academy. 
+                    Scouts, coaches, and club representatives are welcome to reach out for trials, assessments, or further discussions.
+                </p>
+                <div class="contact-methods">
+                    <a href="mailto:flashnaman@gmail.com" class="contact-method">
+                        <i class="fas fa-envelope"></i>
+                        <span>flashnaman@gmail.com</span>
+                    </a>
+                    <a href="tel:+12679354065" class="contact-method">
+                        <i class="fas fa-phone"></i>
+                        <span>+1 267-935-4065</span>
+                    </a>
+                    <a href="https://linkedin.com/in/namanmandloi" class="contact-method" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn Profile</span>
+                    </a>
+                    <a href="#" class="contact-method" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-video"></i>
+                        <span>Video Highlights</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Naman Mandloi. Professional Soccer Player - Available for Recruitment.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
